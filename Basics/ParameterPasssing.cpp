@@ -30,4 +30,11 @@ int swap(int &x, int &y)
 }
 //call
 int swap(a,b);
+
+****Array - always passed by Address
+fun(int A[],int a){
+
+}
+fun(B,5);
+****Structure - pass by value or Array, if structure has array it will be copied too.
 */
