@@ -117,31 +117,32 @@ public:
      * @brief Returns value according to position
      * @details 
      * Index Position
-     * 4        1
-     * 3        2
-     * 2        3
-     * 1        4
-     * 0        5
-     * 
+     * 5        1
+     * 4        2 
+     * 3        3
+     * 2        4
+     * 1        5
+     * 0        6
+     * Formula = index-position+size
      * @param position from where to retrive.
      * @return int value from the item.
      */
     int peek(int position)
     {
         int x = -1;
-        if ((top - position + 1) < 0)
+        if ((top - position + size) < 0)
         {
             cout << "Invalid Position";
         }
         else
         {
-            x = s[top - position + 1];
+            x = s[top - position + size];
         }
         return x;
     }
 
     /**
-     * @brief
+     * @brief Return value according to top
      *
      * @return int
      */
@@ -159,7 +160,7 @@ public:
         return x;
     }
     /**
-     * @brief
+     * @brief Returns true if stack is empty.
      *
      * @return bool
      */
@@ -175,7 +176,7 @@ public:
         }
     }
     /**
-     * @brief
+     * @brief Returns true if stack is full.
      *
      * @return true
      * @return false
@@ -211,5 +212,5 @@ int main()
 
     cout<<"Value at Top : "<<s.stackTop()<<endl;
 
-    cout<<"Value at position 4 : "<<s.peek(5)<<endl;
+    cout<<"Value at position 6 : "<<s.peek(6)<<endl;
 }
