@@ -12,8 +12,8 @@
  * Conditions:
  *
  * Operations:
- * Constructor  -
- * push(T x)    - pushes a single value into the stack
+ * Constructor  - creates an array of size on heap and initializes top to -1.
+ * push(T x)    - pushes a single value into the stack.
  * pull()       - pops a single value from the stack.
  * peek()       - returns value according to position.
  * stackTop()   - return value according to top.
@@ -31,6 +31,10 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief 
+ * 
+ */
 class Stack
 {
 private:
@@ -47,7 +51,8 @@ public:
 
     /**
      * @brief Construct a new Stack object
-     *
+     *  Creates an array on heap.
+     *  Initializes top top -1.
      * @param size
      */
     Stack(int size)
@@ -59,7 +64,7 @@ public:
 
     /**
      * @brief Destroy the Stack object
-     *
+     * Destroys array hel by s pointer.
      */
     ~Stack()
     {
@@ -69,7 +74,7 @@ public:
     /**
      * @brief Method to input sinlge value in the stack.
      * @details This method inputs a single value into the stack.
-     * @Complexity -
+     * @Complexity - 1
      * @param x value to be inserted into the stack.
      * @return bool false - unsuccessfu , true - succesful.
      */
@@ -89,9 +94,9 @@ public:
     }
 
     /**
-     * @brief
+     * @brief  Pushes a single value into the stack.
      *
-     * @return int
+     * @return int value of the item that was popped.
      */
     int pop()
     {
@@ -109,10 +114,17 @@ public:
     }
 
     /**
-     * @brief
-     * @details description
-     * @param position
-     * @return int
+     * @brief Returns value according to position
+     * @details 
+     * Index Position
+     * 4        1
+     * 3        2
+     * 2        3
+     * 1        4
+     * 0        5
+     * 
+     * @param position from where to retrive.
+     * @return int value from the item.
      */
     int peek(int position)
     {
@@ -199,5 +211,5 @@ int main()
 
     cout<<"Value at Top : "<<s.stackTop()<<endl;
 
-    cout<<"Value at position 4 : "<<s.peek(1)<<endl;
+    cout<<"Value at position 4 : "<<s.peek(5)<<endl;
 }
