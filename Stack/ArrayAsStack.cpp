@@ -202,15 +202,15 @@ int main()
     cout << "Enter Stack Size";
     cin >> size;
 
-    Stack s(size);
+    Stack *s = new Stack(size);
 
-    s.push(1);
+    s->push(1);
 
-    s.pop();
+    s->pop();
 
-    s.push(4);
+    s->push(4);
 
-    cout<<"Value at Top : "<<s.stackTop()<<endl;
+    cout<<"Value at Top : "<<s->stackTop()<<endl;
 
-    cout<<"Value at position 6 : "<<s.peek(6)<<endl;
+    cout<<"Value at position 6 : "<<s->peek(6)<<endl;
 }
